@@ -5,11 +5,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import logica.Cliente;
-import logica.Factura;
-import logica.LineaFactura;
-import logica.Producto;
-import logica.Proveedor;
+import dominio.Cliente;
+import dominio.Factura;
+import dominio.LineaFactura;
+import dominio.Producto;
+import dominio.Proveedor;
 
 public class ControlFacturas {
 

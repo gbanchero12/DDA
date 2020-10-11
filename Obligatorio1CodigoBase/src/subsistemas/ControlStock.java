@@ -4,9 +4,9 @@ package subsistemas;
 import java.util.ArrayList;
 import java.util.Optional;
 
+import dominio.Producto;
+import dominio.Proveedor;
 import jdk.nashorn.internal.runtime.FindProperty;
-import logica.Producto;
-import logica.Proveedor;
 
 public class ControlStock {
 

@@ -1,8 +1,12 @@
-package logica;
+package dominio;
 
 import java.util.ArrayList;
 import java.util.Date;
 
+import dominio.Cliente;
+import dominio.Factura;
+import dominio.LineaFactura;
+import dominio.Producto;
 import fachada.Fachada;
 import jdk.nashorn.internal.runtime.ListAdapter;
 

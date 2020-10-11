@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-import logica.Cliente;
-import logica.Factura;
-import logica.NotaDeCredito;
+import dominio.Cliente;
+import dominio.Factura;
+import dominio.NotaDeCredito;
 
 public class ControlNotasDeCredito {
 

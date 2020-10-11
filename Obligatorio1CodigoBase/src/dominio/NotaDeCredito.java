@@ -1,5 +1,7 @@
-package logica;
+package dominio;
 import java.util.Date;
+
+import dominio.Factura;
 
 public class NotaDeCredito {
 

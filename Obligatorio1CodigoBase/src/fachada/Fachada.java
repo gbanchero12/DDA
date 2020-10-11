@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import logica.Cliente;
-import logica.Factura;
-import logica.NotaDeCredito;
-import logica.Producto;
-import logica.Proveedor;
+import dominio.Cliente;
+import dominio.Factura;
+import dominio.NotaDeCredito;
+import dominio.Producto;
+import dominio.Proveedor;
 import subsistemas.ControlClientes;
 import subsistemas.ControlFacturas;
 import subsistemas.ControlNotasDeCredito;

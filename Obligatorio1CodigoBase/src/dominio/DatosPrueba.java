@@ -1,5 +1,9 @@
-package logica;
+package dominio;
 
+import dominio.Cliente;
+import dominio.Factura;
+import dominio.Producto;
+import dominio.Proveedor;
 import fachada.Fachada;
 
 public class DatosPrueba {
