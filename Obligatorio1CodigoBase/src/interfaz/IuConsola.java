@@ -115,7 +115,14 @@ public class IuConsola {
 			if(logica.buscarFacturaPorCodigo(nc.getFacturaAsociada().getNumero()) != null)
 				listado.add(nc);
 		}
-		//Consola.listar(listado);
+		
+		mostrarNotaDeCredito(listado);
+	}
+	
+	private void mostrarNotaDeCredito(ArrayList<NotaDeCredito> listado) {
+		for (NotaDeCredito nc : listado) {
+			
+		}
 	}
 
 	private void emisionNotaDeCredito() {

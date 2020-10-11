@@ -24,6 +24,7 @@ public class ControlNotasDeCredito {
 			return;
 		}
 
+		
 		unaNc.setNumero(generarProximoNumero());
 		unaNc.asignarFecha();
 		unaNc.setFacturaAsociada(facturaAsociada);

@@ -12,7 +12,7 @@ public class NotaDeCredito {
 		super();
 	}
 	
-	public NotaDeCredito(Factura facturaAsociada, int numero, Date fecha) {
+	public NotaDeCredito(Factura facturaAsociada, int numero, Date fecha, int codigo) {
 		super();
 		this.facturaAsociada = facturaAsociada;
 		this.numero = numero;
@@ -46,6 +46,7 @@ public class NotaDeCredito {
 	public void asignarFecha() {
 		this.fecha = new Date();
 	}
+
 	
 	
 	
