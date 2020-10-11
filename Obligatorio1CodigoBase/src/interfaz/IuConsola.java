@@ -116,12 +116,17 @@ public class IuConsola {
 				listado.add(nc);
 		}
 		
-		mostrarNotaDeCredito(listado);
+		mostrarListadoNc(listado);
 	}
 	
-	private void mostrarNotaDeCredito(ArrayList<NotaDeCredito> listado) {
+	private void mostrarListadoNc(ArrayList<NotaDeCredito> listado) {
 		for (NotaDeCredito nc : listado) {
-			
+			System.out.println("CodigoNotaCredito:" + nc.getNumero() + 
+					" - CodigoFac: " + nc.getFacturaAsociada().getNumero()
+					+ " - Cantidad de Productos " + nc.getFacturaAsociada().getLineas().size()
+					+ " - Fecha NC: " + nc.getFecha()
+					+ " - Fecha F: " + nc.getFacturaAsociada().getFecha()
+					+ " Monto Total: " + nc.getFacturaAsociada().total());
 		}
 	}
 

@@ -3,6 +3,8 @@ package logica;
 import java.util.ArrayList;
 import java.util.Date;
 
+import jdk.nashorn.internal.runtime.ListAdapter;
+
 public class Factura {
 
 	private Cliente cliente;
@@ -156,6 +158,8 @@ public class Factura {
 			return false;
 		return true;
 	}
+
+	
 	
 	
 }

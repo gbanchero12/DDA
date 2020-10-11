@@ -116,4 +116,6 @@ public class Fachada {
 	public ArrayList<NotaDeCredito> obtenerNotasDeCreditoPorCliente(Cliente cli){
 		return cn.obtenerNotasDeCreditoPorCliente(cli);
 	}
+
+	
 }
