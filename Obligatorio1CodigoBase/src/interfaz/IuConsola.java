@@ -13,6 +13,7 @@ import fachada.Fachada;
 import utilidades.Consola;
 
 public class IuConsola {
+	// dejar solo cosas de interfaz! mover todo para atrass pasando x parametros
 
 	Fachada logica = Fachada.getInstancia();
 
@@ -83,7 +84,6 @@ public class IuConsola {
 	}
 
 	private void consultaNotasDeCredito() {
-		ArrayList<NotaDeCredito> listado = new ArrayList<>();
 		System.out.println("Lista Clientes:");
 		Consola.listar(logica.getClientes());
 		System.out.println("Ingrese cedula de cliente a consultar:");
@@ -94,7 +94,7 @@ public class IuConsola {
 		} else {
 			System.out.println("Has seleccionado: " + cli.getNombre());
 		}
-		
+
 		System.out.println("Lista Proveedores:");
 		Consola.listar(logica.getProveedores());
 		System.out.println("Ingrese nombre de proveedor a consultar:");
@@ -105,27 +105,21 @@ public class IuConsola {
 		} else {
 			System.out.println("Has seleccionado: " + prov.getNombre());
 		}
-		
+
 		ArrayList<Factura> facturas = logica.obtenerFacturasPorProveedor(prov);
 		ArrayList<NotaDeCredito> notasDeCredito = logica.obtenerNotasDeCreditoPorCliente(cli);
+		ArrayList<NotaDeCredito> listado = logica.mapearNcQueContengaFactura(notasDeCredito, facturas);
 
-		for(NotaDeCredito nc : notasDeCredito) {
-			if(facturas.contains(nc.getFacturaAsociada()))
-				listado.add(nc);
-		}
-		
 		mostrarListadoNc(listado);
 	}
-	
+
 	private void mostrarListadoNc(ArrayList<NotaDeCredito> listado) {
 		System.out.println("Resultado de busqueda ---->");
 		for (NotaDeCredito nc : listado) {
-			System.out.println("CodigoNotaCredito:" + nc.getNumero() + 
-					" - CodigoFac: " + nc.getFacturaAsociada().getNumero()
-					+ " - Cantidad de Productos " + nc.getFacturaAsociada().getLineas().size()
-					+ " - Fecha NC: " + nc.getFecha()
-					+ " - Fecha F: " + nc.getFacturaAsociada().getFecha()
-					+ " Monto Total: " + nc.getFacturaAsociada().total());
+			System.out.println("CodigoNotaCredito:" + nc.getNumero() + " - CodigoFac: "
+					+ nc.getFacturaAsociada().getNumero() + " - Cantidad de Productos "
+					+ nc.getFacturaAsociada().getLineas().size() + " - Fecha NC: " + nc.getFecha() + " - Fecha F: "
+					+ nc.getFacturaAsociada().getFecha() + " Monto Total: " + nc.getFacturaAsociada().total());
 		}
 	}
 
@@ -159,10 +153,11 @@ public class IuConsola {
 		}
 
 		logica.agregarNotaDeCredito(nc, factura);
-		factura.getLineas().stream()
-				.forEach((linea) -> logica.devolverProducto(linea.getProducto(), linea.getCantidad()));
 
-		System.out.println("Se anuló la factura correctamente");
+		if (logica.devolverProducto(factura.getLineas()))
+			System.out.println("Se anuló la factura correctamente");
+		else
+			System.out.println("Error al validar un producto");
 
 	}
 

@@ -6,6 +6,7 @@ import java.util.List;
 
 import dominio.Cliente;
 import dominio.Factura;
+import dominio.LineaFactura;
 import dominio.NotaDeCredito;
 import dominio.Producto;
 import dominio.Proveedor;
@@ -31,8 +32,8 @@ public class Fachada {
         return instancia;
     }
     
-    public boolean devolverProducto(Producto p, int cantidad) {
-    	return cs.devolverProducto(p, cantidad);
+    public boolean devolverProducto(ArrayList<LineaFactura> lineas) {
+    	return cs.devolverProducto(lineas);
     }
     
     public ArrayList<NotaDeCredito> getNotasDeCredito() {
@@ -125,6 +126,10 @@ public class Fachada {
 	
 	public ArrayList<NotaDeCredito> obtenerNotasDeCreditoPorCliente(Cliente cli){
 		return cn.obtenerNotasDeCreditoPorCliente(cli);
+	}
+	
+	public ArrayList<NotaDeCredito> mapearNcQueContengaFactura(ArrayList<NotaDeCredito> notasDeCredito, ArrayList<Factura> facturas ) {
+		return cn.mapearNcQueContengaFactura(notasDeCredito, facturas);
 	}
 
 	

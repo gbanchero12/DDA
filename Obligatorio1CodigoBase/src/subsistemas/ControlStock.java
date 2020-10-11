@@ -4,6 +4,7 @@ package subsistemas;
 import java.util.ArrayList;
 import java.util.Optional;
 
+import dominio.LineaFactura;
 import dominio.Producto;
 import dominio.Proveedor;
 import jdk.nashorn.internal.runtime.FindProperty;
@@ -70,11 +71,13 @@ public class ControlStock {
 		return true;
 	}
 
-	public boolean devolverProducto(Producto p, int cantidad) {
-		for (int i = 0; i < cantidad; i++) {
-			p.devolverUnidad(p);
-			if (!agregarProductoDevuelto(p))
-				return false;
+	public boolean devolverProducto(ArrayList<LineaFactura> lineas) {
+		for (LineaFactura linea : lineas) {
+			for (int i = 0; i < linea.getCantidad(); i++) {
+				linea.getProducto().devolverUnidad(linea.getProducto());
+				if (!agregarProductoDevuelto(linea.getProducto()))
+					return false;
+			}
 		}
 		return true;
 	}

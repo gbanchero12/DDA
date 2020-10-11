@@ -62,5 +62,14 @@ public class ControlNotasDeCredito {
 		return lista;
 		}
 	
+	public ArrayList<NotaDeCredito> mapearNcQueContengaFactura(ArrayList<NotaDeCredito> notasDeCredito, ArrayList<Factura> facturas ) {
+		ArrayList<NotaDeCredito> retorno = new ArrayList<NotaDeCredito>();
+		for(NotaDeCredito nc : notasDeCredito) {
+			if(facturas.contains(nc.getFacturaAsociada()))
+				retorno.add(nc);
+		}
+		return retorno;
+	}
+	
 	
 }
