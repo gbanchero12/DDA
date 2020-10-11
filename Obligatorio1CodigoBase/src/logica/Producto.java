@@ -1,7 +1,7 @@
-package dominio;
+package logica;
 
-import dominio.Producto;
-import dominio.Proveedor;
+import logica.Producto;
+import logica.Proveedor;
 
 public class Producto {
     private String nombre;

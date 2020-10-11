@@ -3,13 +3,13 @@ package interfaz;
 import java.io.Console;
 import java.util.ArrayList;
 
-import dominio.Cliente;
-import dominio.Factura;
-import dominio.LineaFactura;
-import dominio.NotaDeCredito;
-import dominio.Producto;
-import dominio.Proveedor;
 import fachada.Fachada;
+import logica.Cliente;
+import logica.Factura;
+import logica.LineaFactura;
+import logica.NotaDeCredito;
+import logica.Producto;
+import logica.Proveedor;
 import utilidades.Consola;
 
 public class IuConsola {

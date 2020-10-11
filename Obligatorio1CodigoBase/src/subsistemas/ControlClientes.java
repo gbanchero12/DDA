@@ -2,9 +2,9 @@ package subsistemas;
 
 import java.util.ArrayList;
 
-import dominio.Cliente;
-import dominio.Producto;
 import fachada.Fachada;
+import logica.Cliente;
+import logica.Producto;
 
 public class ControlClientes {
 

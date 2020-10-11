@@ -1,6 +1,6 @@
-package dominio;
+package logica;
 
-import dominio.Producto;
+import logica.Producto;
 
 public class LineaFactura {
     

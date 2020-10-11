@@ -1,7 +1,7 @@
 package main;
 
-import dominio.DatosPrueba;
 import interfaz.IuConsola;
+import logica.DatosPrueba;
 
 public class DivisionLogicaEjercicios {
 

@@ -1,9 +1,5 @@
-package dominio;
+package logica;
 
-import dominio.Cliente;
-import dominio.Factura;
-import dominio.Producto;
-import dominio.Proveedor;
 import fachada.Fachada;
 
 public class DatosPrueba {
@@ -52,12 +48,20 @@ public class DatosPrueba {
         
         logica.agregarFactura(f2);
         
-        Factura f3 = new Factura(mario);
-      
-        f3.agregar(1, camisa);
-        f3.agregar(1, computadora);
-        f3.setMedioDePago(3);
+        Factura f3 = new Factura(ana);
+        f3.agregar(400, caramelo);
+        f3.agregar(20, camisa);
+        f3.agregar(10, computadora);
+        f3.setMedioDePago(2);
         
         logica.agregarFactura(f3);
+        
+        Factura f4 = new Factura(mario);
+      
+        f4.agregar(1, camisa);
+        f4.agregar(1, computadora);
+        f4.setMedioDePago(3);
+        
+        logica.agregarFactura(f4);
     }
 }

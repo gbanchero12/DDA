@@ -1,4 +1,4 @@
-package dominio;
+package logica;
 
 public class Cliente {
     

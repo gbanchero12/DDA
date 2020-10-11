@@ -1,8 +1,8 @@
-package dominio;
+package logica;
 
 import java.util.ArrayList;
 
-import dominio.Producto;
+import logica.Producto;
 
 public class Proveedor {
     
