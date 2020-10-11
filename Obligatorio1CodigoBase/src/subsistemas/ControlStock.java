@@ -1,10 +1,12 @@
 
-package logica;
+package subsistemas;
 
 import java.util.ArrayList;
 import java.util.Optional;
 
 import jdk.nashorn.internal.runtime.FindProperty;
+import logica.Producto;
+import logica.Proveedor;
 
 public class ControlStock {
 

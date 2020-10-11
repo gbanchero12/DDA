@@ -1,8 +1,18 @@
-package logica;
+package fachada;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import logica.Cliente;
+import logica.Factura;
+import logica.NotaDeCredito;
+import logica.Producto;
+import logica.Proveedor;
+import subsistemas.ControlClientes;
+import subsistemas.ControlFacturas;
+import subsistemas.ControlNotasDeCredito;
+import subsistemas.ControlStock;
 
 public class Fachada {
     

@@ -3,6 +3,7 @@ package logica;
 import java.util.ArrayList;
 import java.util.Date;
 
+import fachada.Fachada;
 import jdk.nashorn.internal.runtime.ListAdapter;
 
 public class Factura {
@@ -96,7 +97,7 @@ public class Factura {
 		this.setFecha(new Date());
 	}
 
-	protected void bajarStock() {
+	public void bajarStock() {
 		for (LineaFactura lf : lineas) {
 			lf.bajarStock();
 		}

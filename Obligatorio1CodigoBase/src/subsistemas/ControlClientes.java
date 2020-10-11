@@ -1,6 +1,10 @@
-package logica;
+package subsistemas;
 
 import java.util.ArrayList;
+
+import fachada.Fachada;
+import logica.Cliente;
+import logica.Producto;
 
 public class ControlClientes {
 
@@ -26,7 +30,7 @@ public class ControlClientes {
         return retorno;
     }
     
-    ArrayList clientesCompraronProductoMenorPrecio() {
+    public ArrayList clientesCompraronProductoMenorPrecio() {
         Producto menor = Fachada.getInstancia().getProductoMenorPrecio();
         ArrayList<Cliente> retorno = new ArrayList<Cliente>();
         

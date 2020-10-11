@@ -2,8 +2,9 @@ package interfaz;
 
 import java.io.Console;
 import java.util.ArrayList;
+
+import fachada.Fachada;
 import logica.Cliente;
-import logica.Fachada;
 import logica.Factura;
 import logica.LineaFactura;
 import logica.NotaDeCredito;

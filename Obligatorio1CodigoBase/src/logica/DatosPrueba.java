@@ -1,5 +1,7 @@
 package logica;
 
+import fachada.Fachada;
+
 public class DatosPrueba {
 
     public static void cargar(){
