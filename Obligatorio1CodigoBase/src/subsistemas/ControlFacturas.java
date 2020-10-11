@@ -71,10 +71,12 @@ public class ControlFacturas {
 		ArrayList<LineaFactura> filtroLineasFactura = new ArrayList<>();
 		this.facturas.forEach(factura -> filtroLineasFactura.addAll(factura.getLineas().stream()
 				.filter(l -> l.getProducto().getProveedor() == pro).collect(Collectors.toList())));
-		
+
 		for (Factura f : this.facturas) {
-			if(filtroLineasFactura.contains(f))
-				facturas.add(f);
+			for (LineaFactura lf : filtroLineasFactura) {
+				if (f.getLineas().contains(lf))
+					facturas.add(f);
+			}
 		}
 		return facturas;
 	}

@@ -110,7 +110,7 @@ public class IuConsola {
 		ArrayList<NotaDeCredito> notasDeCredito = logica.obtenerNotasDeCreditoPorCliente(cli);
 
 		for(NotaDeCredito nc : notasDeCredito) {
-			if(logica.buscarFacturaPorCodigo(nc.getFacturaAsociada().getNumero()) != null)
+			if(facturas.contains(nc.getFacturaAsociada()))
 				listado.add(nc);
 		}
 		
@@ -118,6 +118,7 @@ public class IuConsola {
 	}
 	
 	private void mostrarListadoNc(ArrayList<NotaDeCredito> listado) {
+		System.out.println("Resultado de busqueda ---->");
 		for (NotaDeCredito nc : listado) {
 			System.out.println("CodigoNotaCredito:" + nc.getNumero() + 
 					" - CodigoFac: " + nc.getFacturaAsociada().getNumero()

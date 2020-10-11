@@ -130,39 +130,6 @@ public class Factura {
 	}
 
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Factura other = (Factura) obj;
-		if (cliente == null) {
-			if (other.cliente != null)
-				return false;
-		} else if (!cliente.equals(other.cliente))
-			return false;
-		if (fecha == null) {
-			if (other.fecha != null)
-				return false;
-		} else if (!fecha.equals(other.fecha))
-			return false;
-		if (lineas == null) {
-			if (other.lineas != null)
-				return false;
-		} else if (!lineas.equals(other.lineas))
-			return false;
-		if (medioDePago == null) {
-			if (other.medioDePago != null)
-				return false;
-		} else if (!medioDePago.equals(other.medioDePago))
-			return false;
-		if (numero != other.numero)
-			return false;
-		return true;
-	}
 
 	
 	
