@@ -40,7 +40,7 @@ public class LineaFactura {
                     " $ " + total();
     }
 
-    boolean incrementar(int cantidad) {
+    public boolean incrementar(int cantidad) {
         if (this.cantidad + cantidad > producto.getUnidades()) {
             return false;
         }

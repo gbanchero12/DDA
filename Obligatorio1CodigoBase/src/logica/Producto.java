@@ -107,7 +107,7 @@ public class Producto {
         return nombre!=null && !nombre.trim().equals("");
      }
 
-    protected void modificarStock(int cantidad) {
+    public void modificarStock(int cantidad) {
         unidades+=cantidad;
     }
 
